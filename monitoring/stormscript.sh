@@ -8,6 +8,8 @@ if [[ $HOSTNAME == hn* ]];
 then
   sudo wget https://raw.githubusercontent.com/Azure/hbase-utils/master/monitoring/yarn.headnode.conf -O /etc/opt/microsoft/omsagent/conf/omsagent.d/yarn.headnode.conf
   sudo wget https://raw.githubusercontent.com/emres/HDInsightOMS/STORM-SUPPORT/monitoring/storm.headnode.conf -O /etc/opt/microsoft/omsagent/conf/omsagent.d/storm.headnode.conf
+else
+  sudo wget https://raw.githubusercontent.com/emres/HDInsightOMS/STORM-SUPPORT/monitoring/storm.workernode.conf -O /etc/opt/microsoft/omsagent/conf/omsagent.d/storm.workernode.conf  
 fi
 
 sudo wget https://raw.githubusercontent.com/Azure/hbase-utils/master/monitoring/filter_hdinsight.rb -O /opt/microsoft/omsagent/plugin/filter_hdinsight.rb
